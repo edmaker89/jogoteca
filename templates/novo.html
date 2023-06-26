@@ -15,16 +15,15 @@
         <label for="console">Console</label>
         <input type="text" id="console" name="console" class="form-control">
       </div>
-      <figure>
-        <img src="">
+      <figure class="img-thumbnail col-md-4">
+        <img class="img-fluid" src="{{ url_for('imagem', nome_arquivo='capapadrao.jpg')}}">
         <figcaption>
-          <label>
+          <label class="fileContainer">
             Mudar Capa
             <input type="file" name="arquivo" accept=".jpg,.jpeg,.png" class="form-control-file mt-4 mb-2">
           </label>
         </figcaption>
       </figure>
-      
       <button type="submit" class="btn btn-primary btn-salvar mt-2">Salvar</button>
     </fieldset>
   </form>
