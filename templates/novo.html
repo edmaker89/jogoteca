@@ -1,0 +1,31 @@
+{% extends 'template.html' %}
+{% block conteudo%}
+  <form action="{{url_for('criar')}}" method='POST' enctype="multipart/form-data">
+    
+    <fieldset>
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="categoria">Categoria</label>
+        <input type="text" id="categoria" name="categoria" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="console">Console</label>
+        <input type="text" id="console" name="console" class="form-control">
+      </div>
+      <figure>
+        <img src="">
+        <figcaption>
+          <label>
+            Mudar Capa
+            <input type="file" name="arquivo" accept=".jpg,.jpeg,.png" class="form-control-file mt-4 mb-2">
+          </label>
+        </figcaption>
+      </figure>
+      
+      <button type="submit" class="btn btn-primary btn-salvar mt-2">Salvar</button>
+    </fieldset>
+  </form>
+{% endblock %}
